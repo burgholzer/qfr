@@ -84,6 +84,7 @@ namespace qc {
 		bool           multiTarget = false; // flag to distinguish multi target operations
 		bool           controlled  = false; // flag to distinguish multi control operations
 		char           name[MAX_STRING_LENGTH]{ };
+		unsigned short start_qubit = 0;
 
 		static bool isWholeQubitRegister(const regnames_t& reg, unsigned short start, unsigned short end) {
 			return !reg.empty() && reg[start].first == reg[end].first

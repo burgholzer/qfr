@@ -116,6 +116,9 @@ namespace qc {
 		[[nodiscard]] const registerMap& getQregs()               const { return qregs; }
 		[[nodiscard]] const registerMap& getCregs()               const { return cregs; }
 		[[nodiscard]] const registerMap& getANCregs()             const { return ancregs; }
+		std::unique_ptr<Operation>& getOp(unsigned int idx) {
+			return ops.at(idx);
+		}
 
 		// initialLayout[physical_qubit] = logical_qubit
 		permutationMap initialLayout{ };
